@@ -16,16 +16,6 @@ class App extends Component {
         // state contains an image property that is an empty array
         this.state = {images:[]};
     }
-
-    render(){
-        return (
-            // Root component is a <div>
-            <div>
-                <ImageList images = {this.state.images}/>
-            </div>
-
-        );
-    }
     // Always available for all Component classes
     componentWillMount(){
         // Good place to load data
@@ -35,6 +25,16 @@ class App extends Component {
             .then(response => this.setState({images :response.data.data}));
         //NEVER DO THIS : this.state.images = [{}, {}];
 
+    }
+
+    render(){
+        return (
+            // Root component is a <div>
+            <div>
+                <ImageList images = {this.state.images}/>
+            </div>
+
+        );
     }
 }
 
