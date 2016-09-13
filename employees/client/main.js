@@ -4,6 +4,7 @@
 
 import React from 'react';
 import ReactDom from 'react-dom';
+import EmployeeList from './componets/employee_list';
 
 
 const App = ()=>{
